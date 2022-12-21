@@ -1,11 +1,9 @@
 const input = require('fs').readFileSync('dev/stdin').toString();
+let num = parseInt(input);
 let cnt = '';
 
-for(let i=1; i<=input; i++){
-    let blank = '';
-    cnt += '*';
-    for(let j=input-i; j>0; j--){
-        blank += ' ';
-    }
-    console.log(blank + cnt);
+for(let i=1; i<=num; i++){
+    cnt += "*";
+    let blank = ' '.repeat(num - i);
+    console.log(`${blank}${cnt}`);
 }
