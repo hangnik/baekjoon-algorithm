@@ -1,8 +1,9 @@
-const input = require('fs').readFileSync('dev/stdin').toString().trim().split('\n');
-const num = input.map(Number);
-let max = num[0];
-for(let i=0; i<num.length; i++){
-    if(max < num[i]) max = num[i];
+const input = require('fs').readFileSync('dev/stdin').toString().trim().split('\n').map(Number);
+let max = input[0];
+
+for(let i=0; i<input.length; i++){
+    if(max < input[i]) max = input[i];
 }
-const index = Number(num.indexOf(max))+1;
+
+const index = input.indexOf(max) + 1;
 console.log(max + '\n' + index);
