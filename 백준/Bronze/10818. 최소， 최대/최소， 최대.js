@@ -1,6 +1,12 @@
 const input = require('fs').readFileSync('dev/stdin').toString().trim().split('\n');
 const num = parseInt(input[0]);
-const compareNum = (a, b) => a - b;
-const arr = input[1].trim().split(' ').map(Number).sort(compareNum);
+const arr = input[1].split(' ').map(Number);
+let max = arr[0];
+let min = arr[0];
 
-console.log(`${arr[0]} ${arr[num-1]}`);
+for(let i=0; i<num; i++){
+    if(max < arr[i]) max = arr[i];
+    if(min > arr[i]) min = arr[i];
+}
+
+console.log(`${min} ${max}`);
