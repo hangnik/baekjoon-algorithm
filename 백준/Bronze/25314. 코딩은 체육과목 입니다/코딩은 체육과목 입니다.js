@@ -4,7 +4,10 @@ const input = require("fs")
   .split(" ")
   .map(Number);
 
+let result = "";
 for (let i = 0; i < input / 4; i++) {
-  process.stdout.write("long" + " ");
+  result += "long ";
 }
-process.stdout.write("int");
+result += "int";
+
+console.log(result);
