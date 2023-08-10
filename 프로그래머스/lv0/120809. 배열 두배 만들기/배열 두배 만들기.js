@@ -1,6 +1,4 @@
 function solution(numbers) {
-  const answer = numbers.map((v) => {
-    return v * 2;
-  });
+  const answer = numbers.map((v) => v * 2);
   return answer;
 }
