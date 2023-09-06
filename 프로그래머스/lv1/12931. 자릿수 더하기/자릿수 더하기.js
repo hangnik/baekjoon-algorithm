@@ -1,5 +1,5 @@
 function solution(n) {
-    const answer = [...n.toString()].map(v => parseInt(v)).reduce((a,c) => a+c, 0);
+    const answer = [...n.toString()].reduce((a, c) => a + parseInt(c), 0);
 
     return answer;
 }
