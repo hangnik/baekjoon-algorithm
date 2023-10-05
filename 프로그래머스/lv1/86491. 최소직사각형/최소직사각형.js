@@ -1,19 +1,7 @@
 function solution(sizes) {
- 
-  for (let arr of sizes) {
-    arr.sort((a, b) => b - a);
-  }
+  const arr = sizes.flat().sort((a, b) => a - b);
+  const width = arr[arr.length - 1];
+  const height = arr[arr.length / 2 - 1];
 
-  let width = [],
-    height = [];
-
-  sizes.forEach((i) => {
-    width.push(i[0]);
-    height.push(i[1]);
-  });
-
-  width.sort((a, b) => b - a);
-  height.sort((a, b) => b - a);
-
-  return width[0] * height[0];
+  return width * height;
 }
