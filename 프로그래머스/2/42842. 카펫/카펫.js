@@ -1,10 +1,14 @@
 function solution(brown, yellow) {
-    let answer = [];
-    let x, y;
+  let sum = brown + yellow;
 
-    x = -1 + (brown / 4) + Math.sqrt(1 - (brown / 2) + (brown * brown / 16) - yellow);
-    y = -1 + (brown / 4) - Math.sqrt(1 - (brown / 2) + (brown * brown / 16) - yellow);
-    answer = [x + 2, y + 2];
+  for (let h = 3; h <= brown; h++) {
 
-    return answer;
+    if (sum % h === 0) {
+      let w = sum / h;
+
+      if ((h - 2) * (w - 2) === yellow) {
+        return [w, h];
+      }
+    }
+  }
 }
