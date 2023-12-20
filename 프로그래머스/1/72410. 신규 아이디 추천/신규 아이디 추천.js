@@ -7,9 +7,7 @@ function solution(new_id) {
     .replaceAll(/\.{2,}/g, ".")
     .replace(/(^\.*|\.*$)/g, "")
     .replace(/^ *$/, "a")
-    .split("")
     .slice(0, 15)
-    .join("")
     .replace(/(\.*$)/g, "");
   answer = answer.padEnd(3, answer[answer.length - 1]);
   return answer;
